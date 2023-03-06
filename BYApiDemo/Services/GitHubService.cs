@@ -36,7 +36,7 @@ namespace BYApiDemo.Services
             byte[] bytes = Encoding.ASCII.GetBytes(xmlaScript);
             var fileContent = Convert.ToBase64String(bytes);
             var fileResponse = await GetFile(fileName, repository);
-            var payload = new Payload("Inserted new model file xmla script model.xmla", new Committer("shyam", "shyam@maqsoftware.com"), fileContent);
+            var payload = new Payload("Inserted new model file xmla script model.xmla", new Committer("Blue Yonder MAQ", "bydev@maqsoftware.com"), fileContent);
             var client = GetClient();
             if (string.IsNullOrEmpty(fileResponse))
             {
